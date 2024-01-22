@@ -1,0 +1,102 @@
+let listaGenerica=[2,3,4,];
+console.log (listaGenerica);
+
+let lenguajesDeProgramacion = ['Javascript', 'C', 'C++', 'Kotlin', 'Python'];
+//console.log (lenguajesDeProgramacion);
+
+lenguajesDeProgramacion.push('Java', 'Ruby', 'GoLang');
+//console.log (lenguajesDeProgramacion);
+
+function mostrarLenguajes (){
+    console.log (lenguajesDeProgramacion);
+    return;
+}
+mostrarLenguajes ();
+
+function mostrarLenguajesInversos (){
+    lenguajesDeProgramacion.reverse();
+    console.log (lenguajesDeProgramacion);
+}
+mostrarLenguajesInversos();
+
+function promedio(){
+    let cantidad= listaGenerica.length;
+    let total=0;
+    
+    for(let i = 0; i < listaGenerica.length; i++) {
+        total+=listaGenerica[i];        
+    }
+   
+    let prom = total / cantidad;
+    console.log (prom);
+
+}
+promedio();
+
+
+function mayorMenor (lista){
+    let mayor=lista[0];
+    let menor=lista[0];
+
+    for (let i = 0; i < lista.length; i++){
+        if (lista[i]>mayor){
+            mayor=lista[i];
+        }  
+        if (lista[i]<menor){
+            menor=lista[i];
+        }
+    }
+    console.log ('Mayor ' + mayor);
+    console.log ('Menor ' + menor);
+}
+let numeros=[15,8,20,1,25];
+mayorMenor(numeros);
+
+
+function suma(lista1){
+    let total=0;
+
+    for(let i = 0; i<lista1.length; i++){
+        total+=lista1[i];
+    }
+    console.log(total);
+}
+let numeros1=[10,22,33,2,3];
+suma(numeros1);
+
+
+function encontrarIndiceElemento(lista, elemento) {
+    for (let i = 0; i < lista.length; i++) {
+      if (lista[i] === elemento) {
+       // return i; // Retorna el índice del elemento encontrado
+        console.log(i);
+      }
+    }
+    console.log (-1); // Retorna -1 si el elemento no se encuentra en la lista
+    //return -1;
+  }
+let numeros2= [2,6,8,5,7,9];
+  encontrarIndiceElemento(numeros2,11);
+
+function sumarElementos (lista1, lista2){
+    let numeros5=[0];
+    for (let i=0; i<lista1.length; i++){
+        numeros5[i]=lista1[i]+lista2[i];
+    }
+    console.log (numeros5);
+
+}
+let numeros3=[2,3,4,5,6];
+let numeros4=[7,8,9,10,11];
+sumarElementos(numeros3,numeros4);
+
+function cuadradoElementos (lista3){
+    let lista4=[0];
+
+    for (let i = 0; i < lista3.length; i++){
+        lista4[i]=lista3[i] * lista3[i];
+    }
+    console.log (lista4);
+}
+let numeros5=[2,3,4,5,6,7,8];
+cuadradoElementos(numeros5);
